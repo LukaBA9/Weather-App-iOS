@@ -43,13 +43,3 @@ You can save a city and it will appear in the list where you can select it
 ![new york](https://github.com/user-attachments/assets/5a3eac7f-c765-4808-a6cb-315de91ef8f0)
 
 ![new york 2](https://github.com/user-attachments/assets/5bef5692-9332-4c70-a146-4c3e17aa4e0f)
-
-![wind](https://github.com/user-attachments/assets/29774a55-3429-4d91-92a9-ffbc06dff90b)
-![uv](https://github.com/user-attachments/assets/11302c37-6256-4728-ad00-456ce55fe948)
-
-![Sunrise](https://github.com/user-attachments/assets/ad9d785a-5673-4b05-a86a-b556f0dd3a08)
-![pressure](https://github.com/user-attachments/assets/e2cc927f-76a0-4ba4-8a06-a1fec3d3c3c5)
-
-![precipitation](https://github.com/user-attachments/assets/dfd92474-acf9-4dca-a1f6-d6621d62f2da)
-![humidity](https://github.com/user-attachments/assets/581ffbaf-efd0-41ee-a7e8-943f4ded42df)
-![feelslike](https://github.com/user-attachments/assets/f96e6c9c-d042-4a2b-a611-21d66c6c6bd9)
