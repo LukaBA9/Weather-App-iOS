@@ -24,6 +24,8 @@ Tech Stack
 - API: Open-Meteo
 - Charts: Custom-designed temperature graph built with SwiftUI, closely mimicking the one in Apple’s original Weather app.
 
+
+
 The app welcomes you with a simple, yet informative view displaying a 24-hour forecast, and 7-day daily forecast
 
 <img src="https://github.com/user-attachments/assets/8ed81925-9c07-4d18-a4f1-de92059974a6" width="300">
