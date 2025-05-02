@@ -31,6 +31,7 @@ When you scroll down, a bunch of information cards are layed out in a grid displ
 <img src="https://github.com/user-attachments/assets/7ba10b85-8fb7-44f0-9be2-1400732549ca" width="300">
 
 The app allows you to search for cities
+
 <img src="https://github.com/user-attachments/assets/5d471734-d814-47f8-aed7-0047c4308f1a" width="300">
 
 You can save a city and it will appear in the list where you can select it
