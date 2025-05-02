@@ -23,8 +23,6 @@ class CityInformationViewModel : ObservableObject {
     @Published var searchText: String = ""
     @Published var filteredCities: [City] = []
     
-    @Published var weatherData: ForecastModel? = nil
-    
     @Published var currentForecast: ForecastModel.Current = .init()
     @Published var hourlyForecast: ForecastModel.Hourly = .init()
     @Published var dailyForecast: ForecastModel.Daily = .init()
@@ -33,11 +31,7 @@ class CityInformationViewModel : ObservableObject {
     
     @Published var temperateRange: (min: Double, max: Double) = (1000, -1000)
     
-    
-    private var utcOffsetSeconds: Double = 0
-    
     private let downloadManager: DownloadManager = DownloadManager()
-    //private let container: NSPersistentContainer
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -54,7 +48,7 @@ class CityInformationViewModel : ObservableObject {
     }
     
     public var currWeatherImage: String {
-        if currentForecast.isDay == 1 {
+        if isDay {
             return WeatherComponents.shared.weatherIcons[self.currentWeather]?.day ?? "sun.fill"
         } else {
             return WeatherComponents.shared.weatherIcons[self.currentWeather]?.night ?? "sun.fill"
@@ -69,18 +63,11 @@ class CityInformationViewModel : ObservableObject {
         return Global.shared.currentHour(timeZone: Int(self.utcOffset))
     }
     
-    public var isDay: Bool {
+    private var isDay: Bool {
         return self.currentForecast.isDay == 1
     }
     
     init() {
-//        self.container = NSPersistentContainer(name: "CityContainer")
-//        container.loadPersistentStores { _, error in
-//            if let error = error {
-//                print("ERROR LOADING DATA. \(error)")
-//            }
-//        }
-        //self.fetchCities()
         self.addSubscribers()
         self.updateCurrCity(city: DeveloperPreview.shared.cities.first!)
     }
@@ -94,44 +81,14 @@ class CityInformationViewModel : ObservableObject {
             
     }
     
-//    func fetchCities() {
-//        let request = NSFetchRequest<City>(entityName: "CityEntity")
-//        do {
-//            self.storedCities = try container.viewContext.fetch(request)
-//        } catch {
-//            return
-//        }
-//    }
-//    
-//    func addCity(city: City) {
-//        let newCity = City(context: container.viewContext)
-//        newCity.id = city.id
-//        newCity.cityName = city.cityName
-//        newCity.countryCode = city.countryCode
-//        newCity.timeZone = Int32(city.timeZone)
-//        newCity.latitude = city.latitude
-//        newCity.longitude = city.longitude
-//        self.saveData()
-//    }
-//    
-//    func saveData() {
-//        do {
-//            try container.viewContext.save()
-//            self.fetchCities()
-//        } catch let error {
-//            print("ERROR SAVING. \(error)")
-//        }
-//    }
-    
     func updateCurrCity(city: City) {
         Task {
             do {
-                //try await fetchResponses(latitude: city.latitude, longitude: city.longitude)
-                try await downloadManager.fetchWeatherData(latitude: city.latitude, longitude: city.longitude) { utcOffset, currentForecast, dailyForecast, hourlyForecast in
-                    self.utcOffset = utcOffset
-                    self.currentForecast = currentForecast
-                    self.dailyForecast = dailyForecast
-                    self.hourlyForecast = hourlyForecast
+                try await downloadManager.fetchWeatherData(latitude: city.latitude, longitude: city.longitude) { [weak self] utcOffset, currentForecast, dailyForecast, hourlyForecast in
+                    self?.utcOffset = utcOffset
+                    self?.currentForecast = currentForecast
+                    self?.dailyForecast = dailyForecast
+                    self?.hourlyForecast = hourlyForecast
                 }
                 await MainActor.run {
                     currCityStored = self.storedCities.contains(city)
@@ -158,8 +115,12 @@ class CityInformationViewModel : ObservableObject {
     }
     
     func isDay(offset: Double) -> Bool {
-        let hour = Date().timeIntervalSince1970 + self.utcOffsetSeconds + (offset * 3600)
-        return hour >= Double(self.dailyForecast.sunrise[0]) && hour <= Double(self.dailyForecast.sunset[0])
+        let currTime = abs(Date().timeIntervalSince1970) + (offset * 3600)
+        let startOfDay = Calendar.current.startOfDay(for: self.hourlyForecast.time[0])
+        let timestamp = startOfDay.timeIntervalSince1970
+        
+        let index = Int((currTime - timestamp) / 86_400)
+        return currTime >= Double(self.dailyForecast.sunrise[index]) && currTime <= Double(self.dailyForecast.sunset[index])
     }
     
     func addSubscribers() {
@@ -176,20 +137,5 @@ class CityInformationViewModel : ObservableObject {
                 self.filteredCities = filteredCities
             }
             .store(in: &cancellables)
-        
-//        dataService.$data
-//            .sink { [weak self] data in
-//                if let data = data {
-//                    self?.weatherData = data
-//                    self?.currentForecast = data.current
-//                    self?.dailyForecast = data.daily
-//                    self?.hourlyForecast = data.hourly
-//                }
-//            }
-//            .store(in: &cancellables)
-    }
-    
-    func convertCoreDataToObjectModel(cityEntity: City) {
-        
     }
 }

@@ -75,8 +75,8 @@ struct WeatherComponents {
                                                                       .thunderstorm: (day: "cloud.bolt.rain", night: "cloud.bolt.rain"),
                                                                       .clear: (day: "sun.max.fill", night: "moon.fill"),
                                                                       .mainlyClear: (day: "cloud.sun.fill", night: "cloud.moon.fill"),
-                                                                      .partlyCloudy: (day: "cloud.fill", night: "cloud.fill"),
-                                                                      .overcast: (day: "cloud.fill", night: "cloud.fill"),
+                                                                      .partlyCloudy: (day: "cloud.fill", night: "cloud.moon.fill"),
+                                                                      .overcast: (day: "cloud.fill", night: "cloud.moon.fill"),
                                                                       .fog: (day: "cloud.fog.fill", night: "cloud.fog.fill"),
                                                                       .rain: (day: "cloud.rain.fill", night: "cloud.moon.rain.fill"),
     ]

@@ -21,6 +21,14 @@ class Global {
     private init() {}
     
     func currentHour(timeZone: Int) -> Int {
-        return Calendar.current.component(.hour, from: Date()) - (TimeZone.current.secondsFromGMT(for: Date()) / 3600) + timeZone
+        
+        let now = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents(in: TimeZone(abbreviation: "GMT")!, from: now)
+        guard let hour = components.hour else { return 0 }
+        if hour + timeZone < 0 {
+            return 24 + (hour + timeZone)
+        }
+        return hour + timeZone
     }
 }

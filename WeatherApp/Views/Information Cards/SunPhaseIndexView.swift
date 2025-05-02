@@ -47,6 +47,23 @@ struct SunPositionView: View {
     var body: some View {
         ZStack {
             
+            horizonView
+            
+            let sunPosX = (sunPos() - middleOffsetX()) * stackWidth
+            let sunPosXNormalized = sunPosX / (stackWidth / (2 * 3.14159))
+            let sunPosY = (cos(sunPosXNormalized) * amplitude)
+            
+            Circle()
+                .frame(width: 15)
+                .foregroundStyle(.white)
+                .glow(color: .white, radius: 15)
+                .offset(x: sunPosX - (stackWidth / 2), y: sunPosY)
+        }
+        .clipped()
+    }
+    
+    private var horizonView: some View {
+        ZStack {
             let sunrisePosX = (-horizonOffsetX())
             let sunrisePosXRelative = sunrisePosX * (2 * 3.14159)
             let sunrisePosY = cos(sunrisePosXRelative) * amplitude
@@ -72,16 +89,6 @@ struct SunPositionView: View {
                 .frame(height: 2.0)
                 .foregroundStyle(.white)
                 .offset(y: -sunrisePosY)
-            
-            let sunPosX = (sunPos() - middleOffsetX()) * stackWidth
-            let sunPosXNormalized = sunPosX / (stackWidth / (2 * 3.14159))
-            let sunPosY = (cos(sunPosXNormalized) * amplitude)
-            
-            Circle()
-                .frame(width: 15)
-                .foregroundStyle(.white)
-                .glow(color: .white, radius: 15)
-                .offset(x: sunPosX - (stackWidth / 2), y: sunPosY)
         }
     }
     
