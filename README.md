@@ -26,7 +26,7 @@ Tech Stack
 
 The app welcomes you with a simple, yet informative view displaying a 24-hour forecast, and 7-day daily forecast
 ![los](https://github.com/user-attachments/assets/8ed81925-9c07-4d18-a4f1-de92059974a6)
-<img src="https://github.com/user-attachments/assets/8ed81925-9c07-4d18-a4f1-de92059974a6" width="300" height: 650>
+<img src="https://github.com/user-attachments/assets/8ed81925-9c07-4d18-a4f1-de92059974a6" width="300">
 
 When you scroll down, a bunch of information cards are layed out in a grid displaying features listed above.
 ![los2](https://github.com/user-attachments/assets/7ba10b85-8fb7-44f0-9be2-1400732549ca)
