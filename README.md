@@ -36,9 +36,7 @@ The app allows you to search for cities
 
 You can save a city and it will appear in the list where you can select it
 
-![03 Free iPhone 16 Pro Mockup (1)](https://github.com/user-attachments/assets/1f0ee8e3-c80a-40d0-b132-c11527670cd3)
-
-
+![los saved](https://github.com/user-attachments/assets/64360fb8-fe66-46ef-81fe-ed4d7b898498)
 ![new york not added](https://github.com/user-attachments/assets/18d75924-c5e7-4a42-8666-35188edd1466)
 ![saved2](https://github.com/user-attachments/assets/a070d65d-e3cf-4f2e-897e-ca29886351d8)
 
