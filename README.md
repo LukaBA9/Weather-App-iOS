@@ -25,20 +25,23 @@ Tech Stack
 - Charts: Custom-designed temperature graph built with SwiftUI, closely mimicking the one in Apple’s original Weather app.
 
 The app welcomes you with a simple, yet informative view displaying a 24-hour forecast, and 7-day daily forecast
-![los](https://github.com/user-attachments/assets/da206301-1aa0-4c5e-867c-21505df855f2)
+![los](https://github.com/user-attachments/assets/4f121ad0-8ad1-47d5-96df-189a4c7e5a39)
+
 
 When you scroll down, a bunch of information cards are layed out in a grid displaying features listed above.
-![los2](https://github.com/user-attachments/assets/f195c44a-f9bb-44a6-9f59-8ff219fdde7c)
+![los2](https://github.com/user-attachments/assets/dc565be6-aa4a-45fc-841c-539b2b82817e)
+
 
 The app allows you to search for cities
 
-![new york search](https://github.com/user-attachments/assets/391bf8f3-5381-4cc0-89c9-de6daffe3aee)
+![new york search](https://github.com/user-attachments/assets/62233d49-949a-43bf-8ee2-dea45aea7622)
+
 
 You can save a city and it will appear in the list where you can select it
 
-![los saved](https://github.com/user-attachments/assets/a275623a-81e0-4083-a348-5e160cac2364)
-![new york not added](https://github.com/user-attachments/assets/18d75924-c5e7-4a42-8666-35188edd1466)
-![saved2](https://github.com/user-attachments/assets/a070d65d-e3cf-4f2e-897e-ca29886351d8)
+![los saved (1)](https://github.com/user-attachments/assets/7a53ea70-3919-4a2e-b69a-411682df3478)
+![new york not added](https://github.com/user-attachments/assets/c8014ece-ff6a-4678-b5b2-9108ea49488e)
+![saved2](https://github.com/user-attachments/assets/2f4b6c85-40f1-42c8-aa81-15a517df4c1f)
 
-![new york](https://github.com/user-attachments/assets/5a3eac7f-c765-4808-a6cb-315de91ef8f0)
-![new york 2](https://github.com/user-attachments/assets/5bef5692-9332-4c70-a146-4c3e17aa4e0f)
+![new york](https://github.com/user-attachments/assets/5335815c-ff42-483d-8166-eeba21661d0b)
+![new york 2](https://github.com/user-attachments/assets/77c262a2-fba3-46dc-b038-2a5c9041c981)
