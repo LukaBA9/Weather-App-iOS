@@ -25,22 +25,27 @@ Tech Stack
 - Charts: Custom-designed temperature graph built with SwiftUI, closely mimicking the one in Apple’s original Weather app.
 
 The app welcomes you with a simple, yet informative view displaying a 24-hour forecast, and 7-day daily forecast
-![los](https://github.com/user-attachments/assets/8ed81925-9c07-4d18-a4f1-de92059974a6)
 <img src="https://github.com/user-attachments/assets/8ed81925-9c07-4d18-a4f1-de92059974a6" width="300">
 
 When you scroll down, a bunch of information cards are layed out in a grid displaying features listed above.
 ![los2](https://github.com/user-attachments/assets/7ba10b85-8fb7-44f0-9be2-1400732549ca)
-
+<img src="https://github.com/user-attachments/assets/7ba10b85-8fb7-44f0-9be2-1400732549ca" width="300">
 
 The app allows you to search for cities
 
 ![new york search](https://github.com/user-attachments/assets/5d471734-d814-47f8-aed7-0047c4308f1a)
+<img src="https://github.com/user-attachments/assets/5d471734-d814-47f8-aed7-0047c4308f1a" width="300">
 
 You can save a city and it will appear in the list where you can select it
 
 ![los saved (1)](https://github.com/user-attachments/assets/d8373e6c-9696-4d14-8b51-ae34392c5e21)
+<img src="https://github.com/user-attachments/assets/d8373e6c-9696-4d14-8b51-ae34392c5e21" width="300">
 ![new york not added](https://github.com/user-attachments/assets/5318d63c-3f1f-4853-b518-de15bd38165d)
+<img src="https://github.com/user-attachments/assets/5318d63c-3f1f-4853-b518-de15bd38165d" width="300">
 ![saved2](https://github.com/user-attachments/assets/1e5c27ec-4b65-4d23-a4db-87e7c96ce0b6)
+<img src="https://github.com/user-attachments/assets/1e5c27ec-4b65-4d23-a4db-87e7c96ce0b6" width="300">
 
 ![new york](https://github.com/user-attachments/assets/cc12c2ce-d00d-41e7-b3f6-31467422b644)
+<img src="https://github.com/user-attachments/assets/cc12c2ce-d00d-41e7-b3f6-31467422b644" width="300">
 ![new york 2](https://github.com/user-attachments/assets/af02f943-fd42-4181-84b9-ff6e1582e9a1)
+<img src="https://github.com/user-attachments/assets/af02f943-fd42-4181-84b9-ff6e1582e9a1" width="300">
