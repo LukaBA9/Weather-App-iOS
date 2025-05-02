@@ -36,10 +36,9 @@ The app allows you to search for cities
 
 You can save a city and it will appear in the list where you can select it
 
-![los saved](https://github.com/user-attachments/assets/64360fb8-fe66-46ef-81fe-ed4d7b898498)
+![los saved](https://github.com/user-attachments/assets/a275623a-81e0-4083-a348-5e160cac2364)
 ![new york not added](https://github.com/user-attachments/assets/18d75924-c5e7-4a42-8666-35188edd1466)
 ![saved2](https://github.com/user-attachments/assets/a070d65d-e3cf-4f2e-897e-ca29886351d8)
 
 ![new york](https://github.com/user-attachments/assets/5a3eac7f-c765-4808-a6cb-315de91ef8f0)
-
 ![new york 2](https://github.com/user-attachments/assets/5bef5692-9332-4c70-a146-4c3e17aa4e0f)
